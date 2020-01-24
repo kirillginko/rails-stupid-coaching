@@ -1,23 +1,10 @@
-<div class = "container">
-<h1> Stupid Coach </h1>
-<div>
-<br>
-<b>the question is:</b>
-  </div>
-    <div>
-    <br>
-    <em><%= @question =%></em>
-  </div>
-  <br>
-  <div>
-  <b>the answer is:</b>
-    </div>
-  <div>
-    <br>
-  <em><%= @answer=%></em>
-  </div>
-  <br>
+<div class="question-div">
+  <p><%= @question.capitalize %></p>
+  <p class="person">-You</p>
+</div>
+
+<div class="answer-div">
+  <p class="answer"><%= @answer %></p>
+  <p class="person">-Your coach</p>
+</div>
  <button type="button" class="btn btn-light"><a href="/ask">Ask Again </a> </button>
- </container>
-
-

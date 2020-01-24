@@ -1,11 +1,8 @@
-<div class = "container">
-<h1> Stupid Coach </h1>
-<br>
-<h3> Ask the coach? <h3>
-<form action="answer">
-  <input type="text" class= "form-group inline-text" name="question">
-  <br>
-  <br>
-  <button type="submit" class="btn btn-dark" value="Ask the Coach!">Ask the Coach!</button>
+<form action="/answer" method="get">
+  <div class="form-group">
+    <label for="question">What is your question?</label>
+    <input type="text" id="question" name="question" placeholder="enter question here" class="form-control">
+  </div>
+  <input type="submit" value="Ask question!" class="btn btn-primary">
 </form>
-</container>
+

@@ -1,16 +1,20 @@
-#frozen_string_literal: true
+# frozen_string_literal: true
 
+# this controller controls the questions actions
 class QuestionsController < ApplicationController
-  def ask; end
+  def ask
+    # ask
+  end
 
   def answer
     @question = params[:question]
-    if @question.include? '?'
-      return @answer = 'Silly question, get dressed and go to work!'
-    elsif @question == 'I am going to work'
-      return @answer = 'Great'
-    else
-      return @answer = "I don't care, get dressed and go to work!"
-    end
+
+    @answer = if @question == 'I am going to work'
+                'Great!'
+              elsif @question[-1] == '?'
+                'Silly question, get dressed and go to work!'
+              else
+                'I don\'t care, get dressed and go to work!'
+              end
   end
 end
